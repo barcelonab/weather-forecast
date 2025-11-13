@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/reportExtension/1.0.0/schema.json",
+  "name": "extension",
+  "entities": [
+    {
+      "name": "_measure",
+      "measures": [
+        {
+          "name": "Measure (Single Result)",
+          "dataType": "Double",
+          "expression": "\nVAR _code = CALCULATE(MAX(temperature[weather_code]), ALL(temperature))\nRETURN\nSWITCH(_code,\n    0, \"Billie\",\n    \"?\"\n)"
+        }
+      ]
+    }
+  ]
+}
